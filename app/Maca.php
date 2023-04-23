@@ -1,24 +1,24 @@
 <?php
 
-
 namespace App;
 
-class Player
+class Maca
 {
+    private string $sprite = "🍎";
     private $PosicaoColuna;
     private $PosicaoLinha;
-    private $sprite = "👤";
 
-    public function __construct()
-    {
-        $this->setPosicaoLinha(0)->setPosicaoColuna(0);
-    }
-    
-    public function getSprite()
+    public function getSprite(): string
     {
         return $this->sprite;
     }
-    
+
+    public function carregarPosicaoSurgimento(int $max_linha, int $max_coluna)
+    {
+        $this->setPosicaoLinha(rand(0, $max_linha));
+        $this->setPosicaoColuna(rand(0, $max_coluna));
+    }
+
     public function getPosicaoLinha()
     {
         return $this->PosicaoLinha;

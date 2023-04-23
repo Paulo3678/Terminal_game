@@ -12,7 +12,7 @@ $mapa->setJogador($jogador);
 
 $jogando = true;
 
-system("clear");
+// system("clear");
 
 while ($jogador) {
     echo "--------------------" . PHP_EOL;
@@ -27,7 +27,7 @@ while ($jogador) {
     $movimento = readline("Para onde deseja mover? ");
     if ($movimento !== "sair") {
         $mapa->movimentarJogador($movimento);
-        system("clear");
+        // system("clear");
     } else {
         $jogador = false;
     }
