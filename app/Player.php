@@ -9,6 +9,11 @@ class Player
     private $PosicaoLinha;
     private $sprite = "♔";
 
+    public function __construct()
+    {
+        $this->setPosicaoLinha(0)->setPosicaoColuna(0);
+    }
+
     public function getPosicaoLinha()
     {
         return $this->PosicaoLinha;

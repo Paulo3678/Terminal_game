@@ -19,15 +19,6 @@ class Mapa
         $this->layout[$this->jogador->getPosicaoLinha()][$this->jogador->getPosicaoColuna()] = $this->jogador->getSprite();
     }
 
-    private function carregarLayout()
-    {
-        for ($i = 0; $i <= $this->quantidade_colunas; $i++) {
-            for ($j = 0; $j <= $this->quantidade_linhas; $j++) {
-                $this->layout[$i][$j] = 0;
-            }
-        }
-    }
-
     public function movimentarJogador(string $movimento)
     {
         $regras_movimento = new RegrasMovimentos();
@@ -47,6 +38,15 @@ class Mapa
                 echo " ";
             }
             echo PHP_EOL;
+        }
+    }
+
+    private function carregarLayout()
+    {
+        for ($i = 0; $i <= $this->quantidade_colunas; $i++) {
+            for ($j = 0; $j <= $this->quantidade_linhas; $j++) {
+                $this->layout[$i][$j] = 0;
+            }
         }
     }
 }
